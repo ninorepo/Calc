@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calc_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="2sp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lcd"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/lcd_init"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="34sp" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80sp"
+        android:layout_marginRight="3sp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="10sp"
+            android:paddingLeft="15sp"
+            android:paddingRight="10sp">
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='numberClick'
+                android:paddingTop="0.5sp"
+                android:text="("
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/clear3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='numberClick'
+                android:paddingTop="0.5sp"
+                android:text=")"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/clear2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='clearClick'
+                android:paddingTop="0.5sp"
+                android:text="C"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/erase"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='eraseClick'
+                android:padding="10sp"
+                android:paddingTop="0.5sp"
+                android:text="Del"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15sp"
+            android:paddingRight="10sp">
+
+            <Button
+                android:id="@+id/seven"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='numberClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="7"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/eight"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='numberClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="8"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/nine"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='numberClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="9"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/mult"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='operatorClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="*"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15sp"
+            android:paddingRight="10sp">
+
+            <Button
+                android:id="@+id/four"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='numberClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="4"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/five"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:clickable="true"
+                android:onClick='numberClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="5"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp"
+                android:layout_margin="1sp" />
+
+            <Button
+                android:id="@+id/six"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='numberClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="6"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/div"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='operatorClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="/"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15sp"
+            android:paddingRight="10sp">
+
+            <Button
+                android:id="@+id/one"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='numberClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/two"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='numberClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="2"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/three"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='numberClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="3"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='operatorClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="+"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="15sp"
+            android:paddingRight="10sp">
+
+            <Button
+                android:id="@+id/point"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='numberClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="."
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/zero"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='numberClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/equ"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='equalClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="="
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/sub"
+                android:layout_width="match_parent"
+                android:layout_height="100sp"
+                android:layout_margin="1sp"
+                android:clickable="true"
+                android:onClick='operatorClick'
+                android:padding="20sp"
+                android:paddingTop="0.5sp"
+                android:text="-"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textSize="30sp" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
